@@ -1,0 +1,171 @@
+body {
+  background-color: #181945;
+  margin: 0;
+}
+
+main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+}
+
+.difficulty-button, .two-player-button {
+  text-decoration: none;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 30px;
+  margin-right: 25px;
+  margin-left: 25px;
+  color: #fff;
+}
+
+.difficulty-button:hover, .two-player-button:hover {
+  text-decoration: underline;
+}
+
+#button-container, .button-container, #resetButtonContainer{
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.Status{
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.Guess{
+  color: #fff;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 75px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #181945;
+}
+
+.difficulty-button, .two-player-button { 
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 25px;
+  margin-left: 25px;
+  color: #fff;
+}
+
+.difficulty-button:hover, .two-player-button:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+a.clicked {
+  text-decoration: underline;
+  font-weight: 800;
+  color: #fff;
+
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    font-size: 25px;
+    padding: 0px;
+    align-content: center;
+}
+
+
+.game-board-wrapper {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin-right: 120px;
+  margin: 5px;
+}
+
+.button {
+  width: 90px;
+  font-size: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  color: #181945;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-bottom: 40px;
+  align-content: center;
+  margin-left: 100px;
+
+}
+
+.letter {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  background: #181945;
+  border: solid 1px #fff
+}
+
+#letterBoard {
+  background-color: #181945;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+}
+
+.disabled {
+  background-color: #fff; 
+  color: #181945;
+}
+
+#containerForHiddenLetterList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+#hiddenLetterList {
+  text-align: center;
+  letter-spacing: 10px;
+  font-size: 100px;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+}
+
+.winOrLossMessage {
+  font-size: 70px;
+  color: #fff; 
+  padding: 5px;
+}
+
+button {
+  background-color: #fff; 
+  color: #fff;
+  align-items: center;
+}
+
+button:hover {
+  background-color: #fff;
+  align-items: center;
+}
