@@ -1,6 +1,5 @@
     $(document).ready(function() {
 
-
       var secretWordStuff = {
         wordBank : ['astronaut', 'asteroid', 'galaxy', 'jupiter', 'moon', 'alien', 'gravity', 'orbid'],
         generateRandomSecretWord : function () {
@@ -28,8 +27,7 @@
           }
         }
       };
-    
-    
+     
       var game = {
         isOngoing : false,
         startGame : function () {
@@ -108,8 +106,6 @@
         }
       };
     
-    
-    
       var letterBoard = {
         lettersArray : ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
         showLetters : function() {
@@ -123,8 +119,6 @@
             theClickedLetter.prop('disabled', true);
         }
       };
-    
-    
     
       var difficulty = {
         difficultyLevel : 'easy',
@@ -190,12 +184,6 @@
           scoreBoard.gamesLost++;
           $('#number-of-games-lost').html(scoreBoard.gamesLost);
         },
-        resetScore : function() {
-          scoreBoard.gamesWon = 0;
-          scoreBoard.gamesLost = 0;
-          $('#number-of-games-won').html(scoreBoard.gamesWon);
-          $('#number-of-games-lost').html(scoreBoard.gamesLost);
-        }
       };
     
       var buttonHandlers = {
@@ -226,27 +214,12 @@
             game.resetGame();
           }
         },
-        resetScoreBoardHandler : function(event) {
-          scoreBoard.resetScore();
-        },
-        difficultyButtonHandler : function(event) {
-          event.preventDefault();
-          event.stopPropagation();
-          var $theClickedDifficultyButton = $(event.target);
-          //only change the difficulty if different from the current difficulty
-          if ($theClickedDifficultyButton.attr('id') === difficulty.difficultyLevel) {
-            return;
-          } else if ($theClickedDifficultyButton.attr('id') !== difficulty.difficultyLevel) {
-            difficulty.setDifficulty($theClickedDifficultyButton);
-          }
-        },
+      
       };
-    
-    
+
       $('#startButton').on('click', buttonHandlers.startClickHandler);
       $('#letterBoard').on('click', buttonHandlers.letterClickHandler);
       $('#resetButtonContainer').on('click', '#resetButton', buttonHandlers.resetClickHandler);
-      $('#reset-score-board').on('click', buttonHandlers.resetScoreBoardHandler);
       $('.difficulty-button').on('click', buttonHandlers.difficultyButtonHandler);
     
     });    
